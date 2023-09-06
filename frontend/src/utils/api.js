@@ -1,8 +1,6 @@
 class Api {
   constructor(options) {
     this._baseUrl = options.baseUrl;
-    // this._headers = options.headers;
-    // this._authorization = options.headers.authorization;
   }
 
   // проверка ответа сервера и преобразование из json
@@ -17,7 +15,6 @@ class Api {
   getInitialCards(token) {
     return fetch(`${this._baseUrl}/cards`, {
       headers: {
-        // authorization: this._authorization,
         authorization: `Bearer ${token}`,
       },
     }).then((res) => this._getResponseData(res));
@@ -27,7 +24,6 @@ class Api {
   addNewCard(cardData, token) {
     return fetch(`${this._baseUrl}/cards`, {
       method: 'POST',
-      // headers: this._headers,
       headers: {
         authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -44,7 +40,6 @@ class Api {
   deleteCard(cardId, token) {
     return fetch(`${this._baseUrl}/cards/${cardId}`, {
       method: 'DELETE',
-      // headers: this._headers,
       headers: {
         authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -57,7 +52,6 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: 'PUT',
       headers: {
-        // authorization: this._authorization,
         authorization: `Bearer ${token}`,
       },
     }).then((res) => this._getResponseData(res));
@@ -68,7 +62,6 @@ class Api {
     return fetch(`${this._baseUrl}/cards/${cardId}/likes`, {
       method: 'DELETE',
       headers: {
-        // authorization: this._authorization,
         authorization: `Bearer ${token}`,
       },
     }).then((res) => this._getResponseData(res));
@@ -86,7 +79,6 @@ class Api {
   getMyUserInfo(token) {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: {
-        // authorization: this._authorization,
         authorization: `Bearer ${token}`,
       },
     }).then((res) => this._getResponseData(res));
@@ -96,7 +88,6 @@ class Api {
   editUserInfo(profileData, token) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: 'PATCH',
-      // headers: this._headers,
       headers: {
         authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -112,7 +103,6 @@ class Api {
   editAvatar(profileData, token) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: 'PATCH',
-      // headers: this._headers,
       headers: {
         authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -134,12 +124,5 @@ class Api {
 
 // создание экземпляра класса Api
 export const api = new Api({
-  // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-66',
-  baseUrl: 'http://localhost:3000',
-  // baseUrl: 'https://api.methoni.nomoredomainsicu.ru',
-  // baseUrl: 'http://api.methoni.nomoredomainsicu.ru',
-  // headers: {
-  //   authorization: 'b76f62bc-fc94-47a0-8fcd-24ebc70a3fc1',
-  //   'Content-Type': 'application/json',
-  // },
+  baseUrl: 'https://api.methoni.nomoredomainsicu.ru',
 });

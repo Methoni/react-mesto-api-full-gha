@@ -44,7 +44,5 @@ class Auth {
 
 // создание экземпляра класса Auth
 export const auth = new Auth({
-  baseUrl: 'http://localhost:3000',
-  // baseUrl: 'https://api.methoni.nomoredomainsicu.ru',
-  // baseUrl: 'http://api.methoni.nomoredomainsicu.ru',
+  baseUrl: 'https://api.methoni.nomoredomainsicu.ru',
 });

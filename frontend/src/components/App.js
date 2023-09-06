@@ -75,16 +75,13 @@ function App() {
 
   function handleCardLike(card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
-    // const isLiked = card.likes.some((i) => i._id === currentUser._id);
     const isLiked = card.likes.some((i) => i === currentUser._id);
-    // console.log(currentUser._id);
-    // console.log(card.likes);
 
     // Отправляем запрос в API и получаем обновлённые данные карточки
     api
       .changeLikeCardStatus(card._id, isLiked, localStorage.jwt)
       .then((newCard) => {
-        console.log('Меняем лайк')
+        console.log('Меняем лайк');
         setCards((state) =>
           state.map((c) => (c._id === card._id ? newCard : c))
         );
@@ -186,7 +183,6 @@ function App() {
       auth
         .checkToken(localStorage.jwt)
         .then((res) => {
-          // setUserEmail(res.data.email);
           setUserEmail(res.email);
           setLoggedIn(true);
           navigate('/');

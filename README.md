@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 158.160.3.106
+IP 158.160.3.106
 
 Frontend https://methoni.nomoredomainsicu.ru
 
