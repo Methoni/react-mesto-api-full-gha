@@ -43,10 +43,6 @@ class Auth {
 }
 
 // создание экземпляра класса Auth
-// export const auth = new Auth({
-//   baseUrl: 'https://auth.nomoreparties.co',
-// });
-
 export const auth = new Auth({
   // baseUrl: 'http://localhost:3000',
   baseUrl: 'https://api.methoni.nomoredomainsicu.ru',
