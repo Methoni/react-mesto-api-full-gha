@@ -1,0 +1,6 @@
+.popup__reg-image {
+  width: 120px;
+  aspect-ratio: 1;
+  background: url(../../../images/success.svg) center no-repeat;
+  margin: 60px auto 32px
+}

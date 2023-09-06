@@ -1,0 +1,13 @@
+.place__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  padding: 22px 22px 22px 21px;
+}
+
+@media screen and (max-width: 282px) {
+  .place__line {
+    max-width: 100%;
+  }
+}

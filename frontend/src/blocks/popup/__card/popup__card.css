@@ -1,0 +1,7 @@
+.popup__card {
+  max-width: 75vw;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}

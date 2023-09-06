@@ -1,0 +1,9 @@
+.auth__caption_link {
+  text-decoration: none;
+  color: white;
+}
+
+.auth__caption_link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

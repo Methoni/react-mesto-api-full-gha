@@ -1,0 +1,25 @@
+.popup__icon {
+  position: absolute;
+  margin-top: -40px;
+  margin-right: -40px;
+  align-self: flex-end;
+  border: none;
+  width: 32px;
+  height: 32px;
+  background: url(../../../images/close-icon.svg) center no-repeat;
+}
+
+.popup__icon:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .popup__icon {
+    margin-top: -36px;
+    margin-right: 0;
+    width: 20px;
+    height: 20px;
+    background-size: 20px, 20px;
+  }
+}
